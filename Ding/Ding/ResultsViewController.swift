@@ -17,7 +17,28 @@ class ResultsViewController: UIViewController {
 
         lblResults.text = "Results go here!"
         
+        let url = NSURL(string: "http://www.telize.com/geoip")
         
+        let session = NSURLSession.sharedSession()
+        
+        let task = session.dataTaskWithURL(url!, completionHandler: { (data, response, error) -> Void in
+            
+            if (error != nil) {
+                println(error)
+            } else {
+                
+                println("rawData: ", data)
+                
+                let jsonResult = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as! NSDictionary
+                
+                println("jsonResult: ", jsonResult)
+                println("city: ", jsonResult["city"])
+                
+            }
+        
+        })
+        
+        task.resume()
         
     }
 
