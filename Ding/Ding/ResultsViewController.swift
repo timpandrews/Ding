@@ -29,10 +29,10 @@ class ResultsViewController: UIViewController {
                 
                 println("rawData: ", data)
                 
-                let jsonResult = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as! NSDictionary
+                let jsonResult : AnyObject! = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as! NSDictionary
                 
                 println("jsonResult: ", jsonResult)
-                println("city: ", jsonResult["city"])
+                println(jsonResult["city"] as! String)
                 
             }
         
