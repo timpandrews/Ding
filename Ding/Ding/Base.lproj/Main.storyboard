@@ -36,6 +36,9 @@
                                 <state key="normal" title="Button" image="bell.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="KLI-eE-cNP" kind="show" id="WJX-GL-bHf"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="landingText.png" translatesAutoresizingMaskIntoConstraints="NO" id="gXc-4c-LxR">
                                 <rect key="frame" x="16" y="435" width="343" height="212"/>
@@ -63,7 +66,69 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="448.5" y="414.5"/>
+            <point key="canvasLocation" x="294.5" y="414.5"/>
+        </scene>
+        <!--Results View Controller-->
+        <scene sceneID="Fmw-j9-5qe">
+            <objects>
+                <viewController id="KLI-eE-cNP" customClass="ResultsViewController" customModule="Ding" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="n0i-e0-GrK"/>
+                        <viewControllerLayoutGuide type="bottom" id="w7f-xd-tdH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ot9-HF-vov">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Results" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hIM-nP-WYV">
+                                <rect key="frame" x="16" y="165" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello Monkey!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QOd-ip-sxM">
+                                <rect key="frame" x="114" y="42" width="147" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="3qh-Qs-A8x"/>
+                                    <constraint firstAttribute="width" constant="105" id="JXl-z9-ZNX"/>
+                                    <constraint firstAttribute="height" constant="21" id="awn-Ky-Wft"/>
+                                    <constraint firstAttribute="width" constant="147" id="fFH-Jg-Mdr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="3qh-Qs-A8x"/>
+                                        <exclude reference="JXl-z9-ZNX"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QOd-ip-sxM" firstAttribute="top" secondItem="n0i-e0-GrK" secondAttribute="bottom" constant="22" id="AOX-Ks-Iho"/>
+                            <constraint firstAttribute="centerX" secondItem="QOd-ip-sxM" secondAttribute="centerX" id="Ic4-eq-zUG"/>
+                            <constraint firstItem="QOd-ip-sxM" firstAttribute="top" secondItem="n0i-e0-GrK" secondAttribute="bottom" constant="22" id="etb-WG-eKQ"/>
+                            <constraint firstItem="hIM-nP-WYV" firstAttribute="top" secondItem="QOd-ip-sxM" secondAttribute="bottom" constant="102" id="hee-mL-sZM"/>
+                            <constraint firstAttribute="centerX" secondItem="QOd-ip-sxM" secondAttribute="centerX" id="qpf-aU-iUB"/>
+                            <constraint firstAttribute="centerX" secondItem="hIM-nP-WYV" secondAttribute="centerX" id="yez-LX-Nme"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Ic4-eq-zUG"/>
+                                <exclude reference="etb-WG-eKQ"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="lblResults" destination="hIM-nP-WYV" id="V2Q-NG-HfC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wiy-h7-ceA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="751.5" y="414.5"/>
         </scene>
     </scenes>
     <resources>

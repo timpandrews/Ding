@@ -21,6 +21,7 @@
 		C49971A01BA2D12700F3D916 /* NextChevron.png in Resources */ = {isa = PBXBuildFile; fileRef = C499719A1BA2D12700F3D916 /* NextChevron.png */; };
 		C49971A11BA2D12700F3D916 /* PrevChevron.png in Resources */ = {isa = PBXBuildFile; fileRef = C499719B1BA2D12700F3D916 /* PrevChevron.png */; };
 		C49971A31BA2D13800F3D916 /* white-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C49971A21BA2D13800F3D916 /* white-logo.png */; };
+		C49971A51BA2D3A900F3D916 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49971A41BA2D3A900F3D916 /* ResultsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		C499719A1BA2D12700F3D916 /* NextChevron.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NextChevron.png; sourceTree = "<group>"; };
 		C499719B1BA2D12700F3D916 /* PrevChevron.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PrevChevron.png; sourceTree = "<group>"; };
 		C49971A21BA2D13800F3D916 /* white-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "white-logo.png"; sourceTree = "<group>"; };
+		C49971A41BA2D3A900F3D916 /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				C49971721BA2CFFF00F3D916 /* AppDelegate.swift */,
 				C49971771BA2CFFF00F3D916 /* ViewController.swift */,
 				C49971791BA2CFFF00F3D916 /* Main.storyboard */,
+				C49971A41BA2D3A900F3D916 /* ResultsViewController.swift */,
 				C499717C1BA2CFFF00F3D916 /* Images.xcassets */,
 				C499717E1BA2CFFF00F3D916 /* LaunchScreen.xib */,
 				C49971741BA2CFFF00F3D916 /* Ding.xcdatamodeld */,
@@ -254,6 +257,7 @@
 				C49971781BA2CFFF00F3D916 /* ViewController.swift in Sources */,
 				C49971731BA2CFFF00F3D916 /* AppDelegate.swift in Sources */,
 				C49971761BA2CFFF00F3D916 /* Ding.xcdatamodeld in Sources */,
+				C49971A51BA2D3A900F3D916 /* ResultsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
