@@ -39,6 +39,12 @@ class ResultsViewController: UIViewController {
                             self.lblResults.text = hotelName
                         })
                         
+                        if let address = hotel["address"] as? NSDictionary {
+                            
+                            println(address["address1"])
+                            
+                        }
+                        
                     } else {
                         
                         var hotelName = "n/a"
