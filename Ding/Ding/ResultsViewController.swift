@@ -15,8 +15,6 @@ class ResultsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        lblResults.text = "Results go here!"
-        
         let url = NSURL(string: "http://www.telize.com/geoip")
         
         let session = NSURLSession.sharedSession()
@@ -33,6 +31,16 @@ class ResultsViewController: UIViewController {
                 
                 println("jsonResult: ", jsonResult)
                 println(jsonResult["city"] as! String)
+                
+                var city = jsonResult["city"] as! String
+                
+                println("city: ", city as String)
+                
+                dispatch_async(dispatch_get_main_queue(), {
+                    //perform all UI stuff here
+                    self.lblResults.text = city
+                })
+                
                 
             }
         
