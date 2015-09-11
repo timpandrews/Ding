@@ -1,0 +1,477 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C49971731BA2CFFF00F3D916 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49971721BA2CFFF00F3D916 /* AppDelegate.swift */; };
+		C49971761BA2CFFF00F3D916 /* Ding.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C49971741BA2CFFF00F3D916 /* Ding.xcdatamodeld */; };
+		C49971781BA2CFFF00F3D916 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49971771BA2CFFF00F3D916 /* ViewController.swift */; };
+		C499717B1BA2CFFF00F3D916 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C49971791BA2CFFF00F3D916 /* Main.storyboard */; };
+		C499717D1BA2CFFF00F3D916 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C499717C1BA2CFFF00F3D916 /* Images.xcassets */; };
+		C49971801BA2CFFF00F3D916 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C499717E1BA2CFFF00F3D916 /* LaunchScreen.xib */; };
+		C499718C1BA2D00000F3D916 /* DingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C499718B1BA2D00000F3D916 /* DingTests.swift */; };
+		C499719C1BA2D12700F3D916 /* bell.png in Resources */ = {isa = PBXBuildFile; fileRef = C49971961BA2D12700F3D916 /* bell.png */; };
+		C499719D1BA2D12700F3D916 /* blurryLandingBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = C49971971BA2D12700F3D916 /* blurryLandingBackground.png */; };
+		C499719E1BA2D12700F3D916 /* DINGsplash-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C49971981BA2D12700F3D916 /* DINGsplash-logo.png */; };
+		C499719F1BA2D12700F3D916 /* landingText.png in Resources */ = {isa = PBXBuildFile; fileRef = C49971991BA2D12700F3D916 /* landingText.png */; };
+		C49971A01BA2D12700F3D916 /* NextChevron.png in Resources */ = {isa = PBXBuildFile; fileRef = C499719A1BA2D12700F3D916 /* NextChevron.png */; };
+		C49971A11BA2D12700F3D916 /* PrevChevron.png in Resources */ = {isa = PBXBuildFile; fileRef = C499719B1BA2D12700F3D916 /* PrevChevron.png */; };
+		C49971A31BA2D13800F3D916 /* white-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C49971A21BA2D13800F3D916 /* white-logo.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C49971861BA2D00000F3D916 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C49971651BA2CFFF00F3D916 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C499716C1BA2CFFF00F3D916;
+			remoteInfo = Ding;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C499716D1BA2CFFF00F3D916 /* Ding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ding.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C49971711BA2CFFF00F3D916 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C49971721BA2CFFF00F3D916 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C49971751BA2CFFF00F3D916 /* Ding.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Ding.xcdatamodel; sourceTree = "<group>"; };
+		C49971771BA2CFFF00F3D916 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C499717A1BA2CFFF00F3D916 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C499717C1BA2CFFF00F3D916 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C499717F1BA2CFFF00F3D916 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		C49971851BA2D00000F3D916 /* DingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C499718A1BA2D00000F3D916 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C499718B1BA2D00000F3D916 /* DingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DingTests.swift; sourceTree = "<group>"; };
+		C49971961BA2D12700F3D916 /* bell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bell.png; sourceTree = "<group>"; };
+		C49971971BA2D12700F3D916 /* blurryLandingBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blurryLandingBackground.png; sourceTree = "<group>"; };
+		C49971981BA2D12700F3D916 /* DINGsplash-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DINGsplash-logo.png"; sourceTree = "<group>"; };
+		C49971991BA2D12700F3D916 /* landingText.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = landingText.png; sourceTree = "<group>"; };
+		C499719A1BA2D12700F3D916 /* NextChevron.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NextChevron.png; sourceTree = "<group>"; };
+		C499719B1BA2D12700F3D916 /* PrevChevron.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PrevChevron.png; sourceTree = "<group>"; };
+		C49971A21BA2D13800F3D916 /* white-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "white-logo.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C499716A1BA2CFFF00F3D916 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C49971821BA2D00000F3D916 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C49971641BA2CFFF00F3D916 = {
+			isa = PBXGroup;
+			children = (
+				C499716F1BA2CFFF00F3D916 /* Ding */,
+				C49971881BA2D00000F3D916 /* DingTests */,
+				C499716E1BA2CFFF00F3D916 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C499716E1BA2CFFF00F3D916 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C499716D1BA2CFFF00F3D916 /* Ding.app */,
+				C49971851BA2D00000F3D916 /* DingTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C499716F1BA2CFFF00F3D916 /* Ding */ = {
+			isa = PBXGroup;
+			children = (
+				C49971951BA2D10B00F3D916 /* images */,
+				C49971721BA2CFFF00F3D916 /* AppDelegate.swift */,
+				C49971771BA2CFFF00F3D916 /* ViewController.swift */,
+				C49971791BA2CFFF00F3D916 /* Main.storyboard */,
+				C499717C1BA2CFFF00F3D916 /* Images.xcassets */,
+				C499717E1BA2CFFF00F3D916 /* LaunchScreen.xib */,
+				C49971741BA2CFFF00F3D916 /* Ding.xcdatamodeld */,
+				C49971701BA2CFFF00F3D916 /* Supporting Files */,
+			);
+			path = Ding;
+			sourceTree = "<group>";
+		};
+		C49971701BA2CFFF00F3D916 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C49971711BA2CFFF00F3D916 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C49971881BA2D00000F3D916 /* DingTests */ = {
+			isa = PBXGroup;
+			children = (
+				C499718B1BA2D00000F3D916 /* DingTests.swift */,
+				C49971891BA2D00000F3D916 /* Supporting Files */,
+			);
+			path = DingTests;
+			sourceTree = "<group>";
+		};
+		C49971891BA2D00000F3D916 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C499718A1BA2D00000F3D916 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C49971951BA2D10B00F3D916 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				C49971A21BA2D13800F3D916 /* white-logo.png */,
+				C49971961BA2D12700F3D916 /* bell.png */,
+				C49971971BA2D12700F3D916 /* blurryLandingBackground.png */,
+				C49971981BA2D12700F3D916 /* DINGsplash-logo.png */,
+				C49971991BA2D12700F3D916 /* landingText.png */,
+				C499719A1BA2D12700F3D916 /* NextChevron.png */,
+				C499719B1BA2D12700F3D916 /* PrevChevron.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C499716C1BA2CFFF00F3D916 /* Ding */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C499718F1BA2D00000F3D916 /* Build configuration list for PBXNativeTarget "Ding" */;
+			buildPhases = (
+				C49971691BA2CFFF00F3D916 /* Sources */,
+				C499716A1BA2CFFF00F3D916 /* Frameworks */,
+				C499716B1BA2CFFF00F3D916 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Ding;
+			productName = Ding;
+			productReference = C499716D1BA2CFFF00F3D916 /* Ding.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C49971841BA2D00000F3D916 /* DingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C49971921BA2D00000F3D916 /* Build configuration list for PBXNativeTarget "DingTests" */;
+			buildPhases = (
+				C49971811BA2D00000F3D916 /* Sources */,
+				C49971821BA2D00000F3D916 /* Frameworks */,
+				C49971831BA2D00000F3D916 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C49971871BA2D00000F3D916 /* PBXTargetDependency */,
+			);
+			name = DingTests;
+			productName = DingTests;
+			productReference = C49971851BA2D00000F3D916 /* DingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C49971651BA2CFFF00F3D916 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = justTim;
+				TargetAttributes = {
+					C499716C1BA2CFFF00F3D916 = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					C49971841BA2D00000F3D916 = {
+						CreatedOnToolsVersion = 6.3.1;
+						TestTargetID = C499716C1BA2CFFF00F3D916;
+					};
+				};
+			};
+			buildConfigurationList = C49971681BA2CFFF00F3D916 /* Build configuration list for PBXProject "Ding" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C49971641BA2CFFF00F3D916;
+			productRefGroup = C499716E1BA2CFFF00F3D916 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C499716C1BA2CFFF00F3D916 /* Ding */,
+				C49971841BA2D00000F3D916 /* DingTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C499716B1BA2CFFF00F3D916 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C49971A31BA2D13800F3D916 /* white-logo.png in Resources */,
+				C499717B1BA2CFFF00F3D916 /* Main.storyboard in Resources */,
+				C499719E1BA2D12700F3D916 /* DINGsplash-logo.png in Resources */,
+				C499719D1BA2D12700F3D916 /* blurryLandingBackground.png in Resources */,
+				C49971801BA2CFFF00F3D916 /* LaunchScreen.xib in Resources */,
+				C49971A11BA2D12700F3D916 /* PrevChevron.png in Resources */,
+				C499719C1BA2D12700F3D916 /* bell.png in Resources */,
+				C499719F1BA2D12700F3D916 /* landingText.png in Resources */,
+				C49971A01BA2D12700F3D916 /* NextChevron.png in Resources */,
+				C499717D1BA2CFFF00F3D916 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C49971831BA2D00000F3D916 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C49971691BA2CFFF00F3D916 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C49971781BA2CFFF00F3D916 /* ViewController.swift in Sources */,
+				C49971731BA2CFFF00F3D916 /* AppDelegate.swift in Sources */,
+				C49971761BA2CFFF00F3D916 /* Ding.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C49971811BA2D00000F3D916 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C499718C1BA2D00000F3D916 /* DingTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C49971871BA2D00000F3D916 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C499716C1BA2CFFF00F3D916 /* Ding */;
+			targetProxy = C49971861BA2D00000F3D916 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C49971791BA2CFFF00F3D916 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C499717A1BA2CFFF00F3D916 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C499717E1BA2CFFF00F3D916 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C499717F1BA2CFFF00F3D916 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C499718D1BA2D00000F3D916 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C499718E1BA2D00000F3D916 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C49971901BA2D00000F3D916 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Ding/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C49971911BA2D00000F3D916 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Ding/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		C49971931BA2D00000F3D916 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ding.app/Ding";
+			};
+			name = Debug;
+		};
+		C49971941BA2D00000F3D916 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ding.app/Ding";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C49971681BA2CFFF00F3D916 /* Build configuration list for PBXProject "Ding" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C499718D1BA2D00000F3D916 /* Debug */,
+				C499718E1BA2D00000F3D916 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C499718F1BA2D00000F3D916 /* Build configuration list for PBXNativeTarget "Ding" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C49971901BA2D00000F3D916 /* Debug */,
+				C49971911BA2D00000F3D916 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C49971921BA2D00000F3D916 /* Build configuration list for PBXNativeTarget "DingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C49971931BA2D00000F3D916 /* Debug */,
+				C49971941BA2D00000F3D916 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C49971741BA2CFFF00F3D916 /* Ding.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C49971751BA2CFFF00F3D916 /* Ding.xcdatamodel */,
+			);
+			currentVersion = C49971751BA2CFFF00F3D916 /* Ding.xcdatamodel */;
+			path = Ding.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = C49971651BA2CFFF00F3D916 /* Project object */;
+}
