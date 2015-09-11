@@ -15,7 +15,8 @@ class ResultsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let url = NSURL(string: "http://www.telize.com/geoip")
+        //let url = NSURL(string: "http://www.telize.com/geoip")
+        let url = NSURL(string: "https://api.staysmarter.com/v1/query/2222")
         
         let session = NSURLSession.sharedSession()
         
@@ -24,24 +25,32 @@ class ResultsViewController: UIViewController {
             if (error != nil) {
                 println(error)
             } else {
-                
-                println("rawData: ", data)
-                
                 let jsonResult : AnyObject! = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as! NSDictionary
                 
-                println("jsonResult: ", jsonResult)
-                println(jsonResult["city"] as! String)
-                
-                var city = jsonResult["city"] as! String
-                
-                println("city: ", city as String)
-                
-                dispatch_async(dispatch_get_main_queue(), {
-                    //perform all UI stuff here
-                    self.lblResults.text = city
-                })
-                
-                
+                if jsonResult.count > 0 {
+                    
+                    println(jsonResult["results"])
+                    
+                    if let hotel = jsonResult["results"] as? NSDictionary {
+                        
+                        var hotelName = hotel["name"] as! String
+                        dispatch_async(dispatch_get_main_queue(), {
+                            //perform all UI stuff here
+                            self.lblResults.text = hotelName
+                        })
+                        
+                    } else {
+                        
+                        var hotelName = "n/a"
+                        dispatch_async(dispatch_get_main_queue(), {
+                            //perform all UI stuff here
+                            self.lblResults.text = hotelName
+                        })
+                        
+                    }
+                    
+                }
+
             }
         
         })
