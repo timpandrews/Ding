@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C4501A021BA61EB6005156B4 /* imagePlaceholder2_225.png in Resources */ = {isa = PBXBuildFile; fileRef = C4501A011BA61EB6005156B4 /* imagePlaceholder2_225.png */; };
+		C4501A061BA63D16005156B4 /* AvailabilityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4501A051BA63D16005156B4 /* AvailabilityViewController.swift */; };
 		C49971731BA2CFFF00F3D916 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49971721BA2CFFF00F3D916 /* AppDelegate.swift */; };
 		C49971761BA2CFFF00F3D916 /* Ding.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C49971741BA2CFFF00F3D916 /* Ding.xcdatamodeld */; };
 		C49971781BA2CFFF00F3D916 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49971771BA2CFFF00F3D916 /* ViewController.swift */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		C4501A011BA61EB6005156B4 /* imagePlaceholder2_225.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imagePlaceholder2_225.png; sourceTree = "<group>"; };
+		C4501A051BA63D16005156B4 /* AvailabilityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvailabilityViewController.swift; sourceTree = "<group>"; };
 		C499716D1BA2CFFF00F3D916 /* Ding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ding.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C49971711BA2CFFF00F3D916 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C49971721BA2CFFF00F3D916 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				C49971721BA2CFFF00F3D916 /* AppDelegate.swift */,
 				C49971771BA2CFFF00F3D916 /* ViewController.swift */,
 				C49971791BA2CFFF00F3D916 /* Main.storyboard */,
+				C4501A051BA63D16005156B4 /* AvailabilityViewController.swift */,
 				C49971A41BA2D3A900F3D916 /* ResultsViewController.swift */,
 				C499717C1BA2CFFF00F3D916 /* Images.xcassets */,
 				C499717E1BA2CFFF00F3D916 /* LaunchScreen.xib */,
@@ -261,6 +264,7 @@
 				C49971781BA2CFFF00F3D916 /* ViewController.swift in Sources */,
 				C49971731BA2CFFF00F3D916 /* AppDelegate.swift in Sources */,
 				C49971761BA2CFFF00F3D916 /* Ding.xcdatamodeld in Sources */,
+				C4501A061BA63D16005156B4 /* AvailabilityViewController.swift in Sources */,
 				C49971A51BA2D3A900F3D916 /* ResultsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

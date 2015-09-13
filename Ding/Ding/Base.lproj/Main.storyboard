@@ -156,23 +156,28 @@
                                     <constraint firstAttribute="height" constant="250" id="lKG-Ws-bt5"/>
                                 </constraints>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ud-3F-nTJ">
-                                <rect key="frame" x="154" y="608" width="66" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ud-3F-nTJ">
+                                <rect key="frame" x="118" y="607" width="139" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="66" id="4lW-KC-7Fe"/>
                                     <constraint firstAttribute="height" constant="30" id="Hx1-Ro-3yK"/>
                                     <constraint firstAttribute="height" constant="30" id="Lyf-cv-1oH"/>
                                     <constraint firstAttribute="width" constant="66" id="drd-Dc-xa5"/>
+                                    <constraint firstAttribute="width" constant="139" id="i2x-o9-Vui"/>
                                 </constraints>
-                                <state key="normal" title="Book!">
+                                <state key="normal" title="Book / Availability">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="4lW-KC-7Fe"/>
                                         <exclude reference="Hx1-Ro-3yK"/>
+                                        <exclude reference="drd-Dc-xa5"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <segue destination="kDc-lH-VZZ" kind="show" id="WGv-qT-fYY"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -228,6 +233,65 @@
             </objects>
             <point key="canvasLocation" x="751.5" y="414.5"/>
         </scene>
+        <!--Availability View Controller-->
+        <scene sceneID="dLr-3U-INe">
+            <objects>
+                <viewController id="kDc-lH-VZZ" customClass="AvailabilityViewController" customModule="Ding" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HBi-Yn-xM8"/>
+                        <viewControllerLayoutGuide type="bottom" id="vDM-ta-6lE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Xo7-Xb-pZw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Availability" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vrf-PO-KYW">
+                                <rect key="frame" x="126" y="28" width="123" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="BDY-ud-Hno"/>
+                                    <constraint firstAttribute="width" constant="123" id="Rd1-YT-xLX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sOL-UI-fen">
+                                <rect key="frame" x="170" y="617" width="35" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="dzF-Wf-rga"/>
+                                    <constraint firstAttribute="width" constant="35" id="gBd-gm-aDf"/>
+                                </constraints>
+                                <state key="normal" title="Back">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="KLI-eE-cNP" kind="show" id="4ee-35-Jjt"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OtA-BS-9yE">
+                                <rect key="frame" x="130" y="151" width="115" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sOL-UI-fen" firstAttribute="top" secondItem="Vrf-PO-KYW" secondAttribute="bottom" constant="558" id="2WU-dE-n4I"/>
+                            <constraint firstItem="Vrf-PO-KYW" firstAttribute="top" secondItem="HBi-Yn-xM8" secondAttribute="bottom" constant="8" id="AQb-KM-EMI"/>
+                            <constraint firstAttribute="centerX" secondItem="Vrf-PO-KYW" secondAttribute="centerX" id="QFb-Pk-RfO"/>
+                            <constraint firstAttribute="centerX" secondItem="sOL-UI-fen" secondAttribute="centerX" id="rjE-DI-ONl"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="lblTest" destination="OtA-BS-9yE" id="CoA-i4-zqq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FIb-Np-EHL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1238.5" y="414.5"/>
+        </scene>
     </scenes>
     <resources>
         <image name="bell.png" width="623" height="409"/>
@@ -236,4 +300,7 @@
         <image name="landingText.png" width="401" height="300"/>
         <image name="white-logo.png" width="518" height="518"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="4ee-35-Jjt"/>
+    </inferredMetricsTieBreakers>
 </document>
