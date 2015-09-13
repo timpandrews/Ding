@@ -32,12 +32,11 @@ class ResultsViewController: UIViewController, MKMapViewDelegate {
         lblHotelCSV.text = ""
         
         
-        
-        
+    
         
         /* Sample Map Location */
-        var lat:CLLocationDegrees = 40.7
-        var long:CLLocationDegrees = -73.9
+        var lat:CLLocationDegrees = 47.621505
+        var long:CLLocationDegrees = -70.144456
         var latDelta:CLLocationDegrees = 0.01
         var longDelta:CLLocationDegrees = 0.01
         var span:MKCoordinateSpan = MKCoordinateSpanMake(latDelta, longDelta)
