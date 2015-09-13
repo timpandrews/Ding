@@ -113,27 +113,6 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CSV" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BMz-1V-owc">
-                                <rect key="frame" x="16" y="314" width="343" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="343" id="6Ok-eE-paI"/>
-                                    <constraint firstAttribute="height" constant="21" id="JLE-dI-pcJ"/>
-                                    <constraint firstAttribute="width" constant="343" id="f32-gZ-1Ga"/>
-                                    <constraint firstAttribute="height" constant="21" id="oeD-ce-ZDw"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="JLE-dI-pcJ"/>
-                                        <exclude reference="f32-gZ-1Ga"/>
-                                    </mask>
-                                </variation>
-                            </label>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ZNx-iE-S90">
-                                <rect key="frame" x="16" y="343" width="343" height="250"/>
-                            </mapView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LvH-Jd-4kc">
                                 <rect key="frame" x="16" y="298" width="343" height="21"/>
                                 <constraints>
@@ -152,20 +131,69 @@
                                     </mask>
                                 </variation>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CSV" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BMz-1V-owc">
+                                <rect key="frame" x="16" y="314" width="343" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="6Ok-eE-paI"/>
+                                    <constraint firstAttribute="height" constant="21" id="JLE-dI-pcJ"/>
+                                    <constraint firstAttribute="width" constant="343" id="f32-gZ-1Ga"/>
+                                    <constraint firstAttribute="height" constant="21" id="oeD-ce-ZDw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="JLE-dI-pcJ"/>
+                                        <exclude reference="f32-gZ-1Ga"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ZNx-iE-S90">
+                                <rect key="frame" x="16" y="343" width="343" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="Upw-8q-2bz"/>
+                                    <constraint firstAttribute="height" constant="250" id="lKG-Ws-bt5"/>
+                                </constraints>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ud-3F-nTJ">
+                                <rect key="frame" x="154" y="608" width="66" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="66" id="4lW-KC-7Fe"/>
+                                    <constraint firstAttribute="height" constant="30" id="Hx1-Ro-3yK"/>
+                                    <constraint firstAttribute="height" constant="30" id="Lyf-cv-1oH"/>
+                                    <constraint firstAttribute="width" constant="66" id="drd-Dc-xa5"/>
+                                </constraints>
+                                <state key="normal" title="Book!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="4lW-KC-7Fe"/>
+                                        <exclude reference="Hx1-Ro-3yK"/>
+                                    </mask>
+                                </variation>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="BMz-1V-owc" secondAttribute="centerX" id="0kg-Ri-zXZ"/>
                             <constraint firstAttribute="centerX" secondItem="0dh-5U-ugq" secondAttribute="centerX" id="1pB-G6-T40"/>
+                            <constraint firstAttribute="centerX" secondItem="0ud-3F-nTJ" secondAttribute="centerX" id="2Hg-md-Qa9"/>
                             <constraint firstAttribute="centerX" secondItem="BMz-1V-owc" secondAttribute="centerX" id="2eb-ov-GRi"/>
+                            <constraint firstItem="0ud-3F-nTJ" firstAttribute="top" secondItem="ZNx-iE-S90" secondAttribute="bottom" constant="15" id="8l0-Gf-lEA"/>
                             <constraint firstAttribute="centerX" secondItem="efW-jp-Cfl" secondAttribute="centerX" id="Cj6-el-FD0"/>
                             <constraint firstItem="efW-jp-Cfl" firstAttribute="top" secondItem="0dh-5U-ugq" secondAttribute="bottom" constant="16" id="FUu-Mu-Soq"/>
+                            <constraint firstItem="ZNx-iE-S90" firstAttribute="top" secondItem="BMz-1V-owc" secondAttribute="bottom" constant="8" id="HaX-eu-c3N"/>
+                            <constraint firstAttribute="centerX" secondItem="ZNx-iE-S90" secondAttribute="centerX" id="I57-9H-GAU"/>
                             <constraint firstItem="0dh-5U-ugq" firstAttribute="top" secondItem="n0i-e0-GrK" secondAttribute="bottom" constant="8" id="PFu-Xs-YBP"/>
                             <constraint firstAttribute="centerX" secondItem="efW-jp-Cfl" secondAttribute="centerX" id="SEj-MM-pKr"/>
+                            <constraint firstAttribute="centerX" secondItem="0ud-3F-nTJ" secondAttribute="centerX" id="Xo5-oK-uwC"/>
                             <constraint firstItem="LvH-Jd-4kc" firstAttribute="top" secondItem="efW-jp-Cfl" secondAttribute="bottom" constant="8" id="aQ0-Xi-WYZ"/>
                             <constraint firstAttribute="centerX" secondItem="0dh-5U-ugq" secondAttribute="centerX" id="bhF-2F-INz"/>
                             <constraint firstAttribute="centerX" secondItem="LvH-Jd-4kc" secondAttribute="centerX" id="cMe-cK-T6y"/>
                             <constraint firstItem="BMz-1V-owc" firstAttribute="top" secondItem="efW-jp-Cfl" secondAttribute="bottom" constant="24" id="d91-tu-3Cj"/>
+                            <constraint firstItem="0ud-3F-nTJ" firstAttribute="top" secondItem="ZNx-iE-S90" secondAttribute="bottom" constant="15" id="jqv-2i-cvR"/>
                             <constraint firstAttribute="centerX" secondItem="LvH-Jd-4kc" secondAttribute="centerX" id="qwR-k1-kHp"/>
                             <constraint firstItem="BMz-1V-owc" firstAttribute="top" secondItem="efW-jp-Cfl" secondAttribute="bottom" constant="24" id="sRx-Gr-Kcg"/>
                             <constraint firstItem="0dh-5U-ugq" firstAttribute="top" secondItem="n0i-e0-GrK" secondAttribute="bottom" constant="8" id="ut4-ER-Knb"/>
@@ -182,6 +210,8 @@
                                 <exclude reference="wGu-lY-YGq"/>
                                 <exclude reference="2eb-ov-GRi"/>
                                 <exclude reference="d91-tu-3Cj"/>
+                                <exclude reference="8l0-Gf-lEA"/>
+                                <exclude reference="Xo5-oK-uwC"/>
                             </mask>
                         </variation>
                     </view>

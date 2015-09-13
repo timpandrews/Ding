@@ -46,6 +46,12 @@ class ResultsViewController: UIViewController, MKMapViewDelegate {
         
         mapHotelMap.setRegion(region, animated: true)
         
+        var annotation = MKPointAnnotation()
+        annotation.coordinate = location
+        annotation.title = "Hotel"
+        annotation.subtitle = "Address"
+        mapHotelMap.addAnnotation(annotation)
+        
         
         
         
