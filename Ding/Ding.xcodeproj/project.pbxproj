@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C4501A021BA61EB6005156B4 /* imagePlaceholder2_225.png in Resources */ = {isa = PBXBuildFile; fileRef = C4501A011BA61EB6005156B4 /* imagePlaceholder2_225.png */; };
 		C49971731BA2CFFF00F3D916 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49971721BA2CFFF00F3D916 /* AppDelegate.swift */; };
 		C49971761BA2CFFF00F3D916 /* Ding.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C49971741BA2CFFF00F3D916 /* Ding.xcdatamodeld */; };
 		C49971781BA2CFFF00F3D916 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49971771BA2CFFF00F3D916 /* ViewController.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C4501A011BA61EB6005156B4 /* imagePlaceholder2_225.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imagePlaceholder2_225.png; sourceTree = "<group>"; };
 		C499716D1BA2CFFF00F3D916 /* Ding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ding.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C49971711BA2CFFF00F3D916 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C49971721BA2CFFF00F3D916 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 		C49971951BA2D10B00F3D916 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				C4501A011BA61EB6005156B4 /* imagePlaceholder2_225.png */,
 				C49971A21BA2D13800F3D916 /* white-logo.png */,
 				C49971961BA2D12700F3D916 /* bell.png */,
 				C49971971BA2D12700F3D916 /* blurryLandingBackground.png */,
@@ -237,6 +240,7 @@
 				C499719F1BA2D12700F3D916 /* landingText.png in Resources */,
 				C49971A01BA2D12700F3D916 /* NextChevron.png in Resources */,
 				C499717D1BA2CFFF00F3D916 /* Images.xcassets in Resources */,
+				C4501A021BA61EB6005156B4 /* imagePlaceholder2_225.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,6 +457,7 @@
 				C49971911BA2D00000F3D916 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C49971921BA2D00000F3D916 /* Build configuration list for PBXNativeTarget "DingTests" */ = {
 			isa = XCConfigurationList;
@@ -461,6 +466,7 @@
 				C49971941BA2D00000F3D916 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

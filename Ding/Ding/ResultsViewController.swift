@@ -10,10 +10,24 @@ import UIKit
 
 class ResultsViewController: UIViewController {
 
-    @IBOutlet weak var lblResults: UILabel!
+    @IBOutlet weak var imgHotelHeroPic: UIImageView!
+    @IBOutlet weak var lblHotelName: UILabel!
+    @IBOutlet weak var lblHotelAddress1: UILabel!
+    @IBOutlet weak var lblHotelCSV: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        var address1 = ""
+        var hotelName = ""
+        var city = ""
+        var state = ""
+        var zip = ""
+        var csv = ""
+        
+        lblHotelName.text = ""
+        lblHotelAddress1.text = ""
+        lblHotelCSV.text = ""
 
         //let url = NSURL(string: "http://www.telize.com/geoip")
         let url = NSURL(string: "https://api.staysmarter.com/v1/query/2222")
@@ -33,24 +47,36 @@ class ResultsViewController: UIViewController {
                     
                     if let hotel = jsonResult["results"] as? NSDictionary {
                         
-                        var hotelName = hotel["name"] as! String
-                        dispatch_async(dispatch_get_main_queue(), {
-                            //perform all UI stuff here
-                            self.lblResults.text = hotelName
-                        })
+                        hotelName = hotel["name"] as! String
                         
                         if let address = hotel["address"] as? NSDictionary {
                             
-                            println(address["address1"])
+                            address1 = address["address1"] as! String
+                            city = address["city"] as! String
+                            state = address["state"] as! String
+                            zip = address["zip"] as! String
+                            csv = city + ", " + state + "  " + zip
                             
                         }
+                        
+                                                
+                        
+                        dispatch_async(dispatch_get_main_queue(), {
+                            //perform all UI stuff here
+                            self.lblHotelName.text = hotelName
+                            self.lblHotelAddress1.text = address1
+                            self.lblHotelCSV.text = csv
+                            
+                        })
+                        
+                        
                         
                     } else {
                         
                         var hotelName = "n/a"
                         dispatch_async(dispatch_get_main_queue(), {
                             //perform all UI stuff here
-                            self.lblResults.text = hotelName
+                            self.lblHotelName.text = hotelName
                         })
                         
                     }

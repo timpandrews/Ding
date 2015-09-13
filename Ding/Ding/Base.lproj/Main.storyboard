@@ -80,50 +80,62 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hIM-nP-WYV">
-                                <rect key="frame" x="16" y="165" width="343" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imagePlaceholder2_225.png" translatesAutoresizingMaskIntoConstraints="NO" id="0dh-5U-ugq">
+                                <rect key="frame" x="75" y="28" width="225" height="225"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="225" id="Gph-7s-1PI"/>
+                                    <constraint firstAttribute="height" constant="225" id="uJg-Zm-jPV"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hotel Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="efW-jp-Cfl">
+                                <rect key="frame" x="16" y="269" width="343" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="9rn-wd-K1e"/>
+                                    <constraint firstAttribute="height" constant="21" id="jag-xZ-VXJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello Monkey!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QOd-ip-sxM">
-                                <rect key="frame" x="114" y="42" width="147" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LvH-Jd-4kc">
+                                <rect key="frame" x="16" y="298" width="343" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="3qh-Qs-A8x"/>
-                                    <constraint firstAttribute="width" constant="105" id="JXl-z9-ZNX"/>
-                                    <constraint firstAttribute="height" constant="21" id="awn-Ky-Wft"/>
-                                    <constraint firstAttribute="width" constant="147" id="fFH-Jg-Mdr"/>
+                                    <constraint firstAttribute="height" constant="21" id="LfU-6U-zRi"/>
+                                    <constraint firstAttribute="width" constant="343" id="qRu-FL-79y"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="3qh-Qs-A8x"/>
-                                        <exclude reference="JXl-z9-ZNX"/>
-                                    </mask>
-                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CSV" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BMz-1V-owc">
+                                <rect key="frame" x="16" y="314" width="343" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="JLE-dI-pcJ"/>
+                                    <constraint firstAttribute="width" constant="343" id="f32-gZ-1Ga"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="QOd-ip-sxM" firstAttribute="top" secondItem="n0i-e0-GrK" secondAttribute="bottom" constant="22" id="AOX-Ks-Iho"/>
-                            <constraint firstAttribute="centerX" secondItem="QOd-ip-sxM" secondAttribute="centerX" id="Ic4-eq-zUG"/>
-                            <constraint firstItem="QOd-ip-sxM" firstAttribute="top" secondItem="n0i-e0-GrK" secondAttribute="bottom" constant="22" id="etb-WG-eKQ"/>
-                            <constraint firstItem="hIM-nP-WYV" firstAttribute="top" secondItem="QOd-ip-sxM" secondAttribute="bottom" constant="102" id="hee-mL-sZM"/>
-                            <constraint firstAttribute="centerX" secondItem="QOd-ip-sxM" secondAttribute="centerX" id="qpf-aU-iUB"/>
-                            <constraint firstAttribute="centerX" secondItem="hIM-nP-WYV" secondAttribute="centerX" id="yez-LX-Nme"/>
+                            <constraint firstAttribute="centerX" secondItem="0dh-5U-ugq" secondAttribute="centerX" id="1pB-G6-T40"/>
+                            <constraint firstAttribute="centerX" secondItem="BMz-1V-owc" secondAttribute="centerX" id="2eb-ov-GRi"/>
+                            <constraint firstItem="efW-jp-Cfl" firstAttribute="top" secondItem="0dh-5U-ugq" secondAttribute="bottom" constant="16" id="FUu-Mu-Soq"/>
+                            <constraint firstAttribute="centerX" secondItem="efW-jp-Cfl" secondAttribute="centerX" id="SEj-MM-pKr"/>
+                            <constraint firstItem="BMz-1V-owc" firstAttribute="top" secondItem="efW-jp-Cfl" secondAttribute="bottom" constant="24" id="d91-tu-3Cj"/>
+                            <constraint firstAttribute="centerX" secondItem="LvH-Jd-4kc" secondAttribute="centerX" id="qwR-k1-kHp"/>
+                            <constraint firstItem="0dh-5U-ugq" firstAttribute="top" secondItem="n0i-e0-GrK" secondAttribute="bottom" constant="8" id="ut4-ER-Knb"/>
+                            <constraint firstItem="LvH-Jd-4kc" firstAttribute="top" secondItem="efW-jp-Cfl" secondAttribute="bottom" constant="8" id="wGu-lY-YGq"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="Ic4-eq-zUG"/>
-                                <exclude reference="etb-WG-eKQ"/>
-                            </mask>
-                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="lblResults" destination="hIM-nP-WYV" id="V2Q-NG-HfC"/>
+                        <outlet property="imgHotelHeroPic" destination="0dh-5U-ugq" id="net-NH-DA5"/>
+                        <outlet property="lblHotelAddress1" destination="LvH-Jd-4kc" id="559-US-IXY"/>
+                        <outlet property="lblHotelCSV" destination="BMz-1V-owc" id="neR-sa-qi2"/>
+                        <outlet property="lblHotelName" destination="efW-jp-Cfl" id="kux-fC-3LW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wiy-h7-ceA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -134,6 +146,7 @@
     <resources>
         <image name="bell.png" width="623" height="409"/>
         <image name="blurryLandingBackground.png" width="900" height="600"/>
+        <image name="imagePlaceholder2_225.png" width="225" height="225"/>
         <image name="landingText.png" width="401" height="300"/>
         <image name="white-logo.png" width="518" height="518"/>
     </resources>
