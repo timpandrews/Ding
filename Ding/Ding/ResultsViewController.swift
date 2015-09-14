@@ -70,7 +70,7 @@ class ResultsViewController: UIViewController, MKMapViewDelegate {
                 
                 if jsonResult.count > 0 {
                     
-                    //println(jsonResult["results"])
+                    println(jsonResult["results"])
                     
                     if let hotel = jsonResult["results"] as? NSDictionary {
                         
