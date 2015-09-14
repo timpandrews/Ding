@@ -34,7 +34,7 @@ class ResultsViewController: UIViewController, MKMapViewDelegate {
         /* URL for single hotel query by ID */
         let url = NSURL(string: "https://api.staysmarter.com/v1/query/54693")
         /* URL for multi hotel query by long/lat */
-        //let url = NSURL(string: "https://api.staysmarter.com/v1/query?arrivalDate=1441801636&numNights=1&numAdults=2&radius=4.886431949732083&longitude=-77.13445322151701&latitude=38.86523864575938&numRooms=1")
+        //let url = NSURL(string: "https://api.staysmarter.com/v1/query?arrivalDate=1447525547&numNights=1&numAdults=2&radius=4.886431949732083&longitude=-77.13445322151701&latitude=38.86523864575938&numRooms=1")
         
         
         let session = NSURLSession.sharedSession()
@@ -47,13 +47,12 @@ class ResultsViewController: UIViewController, MKMapViewDelegate {
                 let jsonResult : AnyObject! = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as! NSDictionary
                 
                 if jsonResult.count > 0 {
-                    
+                  
                     //println(jsonResult["results"])
                     
                     if let hotel = jsonResult["results"] as? NSDictionary {
                         
                         hotelName = hotel["name"] as! String
-                        
                         
                         /* Address */
                         if let address = hotel["address"] as? NSDictionary {
