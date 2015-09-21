@@ -45,8 +45,43 @@ class ResultsViewController: UIViewController, MKMapViewDelegate {
             
             println(jsonSwifty["results"].count)
             println(jsonSwifty["results"][0])
+            println(jsonSwifty["results"][0]["name"])
             
             
+            /* Name & Address */
+            hotelName = jsonSwifty["results"][0]["name"].stringValue
+            address1 = jsonSwifty["results"][0]["address"]["address1"].stringValue
+            city = jsonSwifty["results"][0]["address"]["city"].stringValue
+            state = jsonSwifty["results"][0]["address"]["state"].stringValue
+            zip = jsonSwifty["results"][0]["address"]["zip"].stringValue
+            csv = city + ", " + state + "  " + zip
+            
+            
+            
+            self.lblHotelName.text = hotelName
+            self.lblHotelAddress1.text = address1
+            self.lblHotelCSV.text = csv
+            
+            /* Photo */
+            println(jsonSwifty["results"][0]["photos"][0])
+            
+            var url = NSURL(string: jsonSwifty["results"][0]["photos"][0].stringValue)
+            var urlRequest = NSURLRequest(URL: url!)
+            
+            NSURLConnection.sendAsynchronousRequest(urlRequest, queue: NSOperationQueue.mainQueue(), completionHandler: { (response, data, error) -> Void in
+                
+                if error != nil {
+                    
+                    println(error)
+                    
+                } else {
+                    
+                    var image = UIImage(data: data)
+                    self.imgHotelHeroPic.image = image
+                    
+                }
+                
+            })
             
         }
         
