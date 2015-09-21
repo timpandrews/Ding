@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 
 class ResultsViewController: UIViewController, MKMapViewDelegate {
-
+    
     @IBOutlet weak var imgHotelHeroPic: UIImageView!
     @IBOutlet weak var lblHotelName: UILabel!
     @IBOutlet weak var lblHotelAddress1: UILabel!
@@ -32,141 +32,221 @@ class ResultsViewController: UIViewController, MKMapViewDelegate {
         lblHotelCSV.text = ""
         
         /* URL for single hotel query by ID */
-        let url = NSURL(string: "https://api.staysmarter.com/v1/query/54693")
+        //let url = NSURL(string: "https://api.staysmarter.com/v1/query/54693")
         /* URL for multi hotel query by long/lat */
-        //let url = NSURL(string: "https://api.staysmarter.com/v1/query?arrivalDate=1447525547&numNights=1&numAdults=2&radius=4.886431949732083&longitude=-77.13445322151701&latitude=38.86523864575938&numRooms=1")
+        let url = NSURL(string: "https://api.staysmarter.com/v1/query?arrivalDate=1447525547&numNights=1&numAdults=2&radius=4.886431949732083&longitude=-77.13445322151701&latitude=38.86523864575938&numRooms=1")
         
-        
-        let session = NSURLSession.sharedSession()
-        
-        let task = session.dataTaskWithURL(url!, completionHandler: { (data, response, error) -> Void in
+        var request = NSURLRequest(URL: url!)
+        var data = NSURLConnection.sendSynchronousRequest(request, returningResponse: nil, error: nil)
+        if data != nil {
+            var jsonSwifty = JSON(data: data!)
+            //println("jsonSwifty:")
+            //println(jsonSwifty)
             
-            if (error != nil) {
-                println(error)
-            } else {
-                let jsonResult : AnyObject! = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as! NSDictionary
+            println(jsonSwifty["results"].count)
+            println(jsonSwifty["results"][0])
+            println(jsonSwifty["results"][0]["name"])
+            
+            
+            /* Name & Address */
+            hotelName = jsonSwifty["results"][0]["name"].string!
+            address1 = jsonSwifty["results"][0]["address"]["address1"].string!
+            city = jsonSwifty["results"][0]["address"]["city"].string!
+            state = jsonSwifty["results"][0]["address"]["state"].string!
+            zip = jsonSwifty["results"][0]["address"]["zip"].string!
+            csv = city + ", " + state + "  " + zip
+            
+            
+            
+            self.lblHotelName.text = hotelName
+            self.lblHotelAddress1.text = address1
+            self.lblHotelCSV.text = csv
+            
+            /* Photo */
+            println(jsonSwifty["results"][0]["photos"][0])
+            
+            var url = NSURL(string: jsonSwifty["results"][0]["photos"][0].stringValue)
+            var urlRequest = NSURLRequest(URL: url!)
+            
+            NSURLConnection.sendAsynchronousRequest(urlRequest, queue: NSOperationQueue.mainQueue(), completionHandler: { (response, data, error) -> Void in
                 
-                if jsonResult.count > 0 {
-                  
-                    //println(jsonResult["results"])
+                if error != nil {
                     
-                    if let hotel = jsonResult["results"] as? NSDictionary {
-                        
-                        hotelName = hotel["name"] as! String
-                        
-                        /* Address */
-                        if let address = hotel["address"] as? NSDictionary {
-                            
-                            address1 = address["address1"] as! String
-                            city = address["city"] as! String
-                            state = address["state"] as! String
-                            zip = address["zip"] as! String
-                            csv = city + ", " + state + "  " + zip
-                            
-                        }
-                        
-                        /* Update Labels */
-                        dispatch_async(dispatch_get_main_queue(), {
-                            self.lblHotelName.text = hotelName
-                            self.lblHotelAddress1.text = address1
-                            self.lblHotelCSV.text = csv
-                            
-                        })
-
-                        
-                        /* Photos */
-                        if let photos = hotel["photos"] as? NSArray {
-                            
-                            //println(photos)
-                            //println(photos[0])
-                            
-                            var url = NSURL(string: photos[0] as! String)
-                            var urlRequest = NSURLRequest(URL: url!)
-                            
-                            NSURLConnection.sendAsynchronousRequest(urlRequest, queue: NSOperationQueue.mainQueue(), completionHandler: { (response, data, error) -> Void in
-                                
-                                if error != nil {
-                                    
-                                    println(error)
-                                    
-                                } else {
-                                    
-                                    var image = UIImage(data: data)
-                                    self.imgHotelHeroPic.image = image
-                                    
-                                }
-                                
-                            })
-                            
-                        }
-                        
-                        /* Location / Maps */
-                        if let hotelLocation = hotel["location"] as? NSDictionary {
-                            
-                            //println(hotelLocation)
-                            //println(hotelLocation["latitude"])
-                            //println(hotelLocation["longitude"])
-                            
-                            var rawLat = hotelLocation["latitude"] as! Double
-                            var rawLong = hotelLocation["longitude"] as! Double
-                            
-                            //println(rawLat)
-                            //println(rawLong)
-
-                            var lat:CLLocationDegrees = rawLat
-                            var long:CLLocationDegrees = rawLong
-                            var latDelta:CLLocationDegrees = 0.01
-                            var longDelta:CLLocationDegrees = 0.01
-                            var span:MKCoordinateSpan = MKCoordinateSpanMake(latDelta, longDelta)
-                            var location: CLLocationCoordinate2D = CLLocationCoordinate2DMake(lat, long)
-                            var region:MKCoordinateRegion = MKCoordinateRegionMake(location, span)
-                            
-                            self.mapHotelMap.setRegion(region, animated: true)
-                            
-                            var annotation = MKPointAnnotation()
-                            annotation.coordinate = location
-                            annotation.title = hotelName
-                            annotation.subtitle = csv
-                            self.mapHotelMap.addAnnotation(annotation)
-                            
-                            
-                            
-                        }
-                        
-                    } else {
-                        
-                        /* No  hotel found */
-                        var hotelName = "n/a"
-                        dispatch_async(dispatch_get_main_queue(), {
-                            self.lblHotelName.text = hotelName
-                        })
-                        
-                    }
+                    println(error)
+                    
+                } else {
+                    
+                    var image = UIImage(data: data)
+                    self.imgHotelHeroPic.image = image
                     
                 }
-
-            }
+                
+            })
+            
+            /* Location / Maps */
+            println(jsonSwifty["results"][0]["location"])
+            println(jsonSwifty["results"][0]["location"]["longitude"])
+            println(jsonSwifty["results"][0]["location"]["latitude"])
+            
+            var rawLat = jsonSwifty["results"][0]["location"]["latitude"].double
+            var rawLong = jsonSwifty["results"][0]["location"]["longitude"].double
+            
+            //println(rawLat)
+            //println(rawLong)
+            
+            var lat:CLLocationDegrees = rawLat!
+            var long:CLLocationDegrees = rawLong!
+            var latDelta:CLLocationDegrees = 0.01
+            var longDelta:CLLocationDegrees = 0.01
+            var span:MKCoordinateSpan = MKCoordinateSpanMake(latDelta, longDelta)
+            var location: CLLocationCoordinate2D = CLLocationCoordinate2DMake(lat, long)
+            var region:MKCoordinateRegion = MKCoordinateRegionMake(location, span)
+            
+            self.mapHotelMap.setRegion(region, animated: true)
+            
+            var annotation = MKPointAnnotation()
+            annotation.coordinate = location
+            annotation.title = hotelName
+            annotation.subtitle = csv
+            self.mapHotelMap.addAnnotation(annotation)
+            
+        } else {
+            
+            self.lblHotelName.text = "n/a"
+            
+        }
+        
+        
+        /*let session = NSURLSession.sharedSession()
+        
+        let task = session.dataTaskWithURL(url!, completionHandler: { (data, response, error) -> Void in
+        
+        if (error != nil) {
+        println(error)
+        } else {
+        let jsonResult : AnyObject! = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as! NSDictionary
+        
+        if jsonResult.count > 0 {
+        
+        //println(jsonResult["results"])
+        
+        if let hotel = jsonResult["results"] as? NSDictionary {
+        
+        hotelName = hotel["name"] as! String
+        
+        /* Address */
+        if let address = hotel["address"] as? NSDictionary {
+        
+        address1 = address["address1"] as! String
+        city = address["city"] as! String
+        state = address["state"] as! String
+        zip = address["zip"] as! String
+        csv = city + ", " + state + "  " + zip
+        
+        }
+        
+        /* Update Labels */
+        dispatch_async(dispatch_get_main_queue(), {
+        self.lblHotelName.text = hotelName
+        self.lblHotelAddress1.text = address1
+        self.lblHotelCSV.text = csv
         
         })
         
-        task.resume()
+        
+        /* Photos */
+        if let photos = hotel["photos"] as? NSArray {
+        
+        //println(photos)
+        //println(photos[0])
+        
+        var url = NSURL(string: photos[0] as! String)
+        var urlRequest = NSURLRequest(URL: url!)
+        
+        NSURLConnection.sendAsynchronousRequest(urlRequest, queue: NSOperationQueue.mainQueue(), completionHandler: { (response, data, error) -> Void in
+        
+        if error != nil {
+        
+        println(error)
+        
+        } else {
+        
+        var image = UIImage(data: data)
+        self.imgHotelHeroPic.image = image
+        
+        }
+        
+        })
+        
+        }
+        
+        /* Location / Maps */
+        if let hotelLocation = hotel["location"] as? NSDictionary {
+        
+        //println(hotelLocation)
+        //println(hotelLocation["latitude"])
+        //println(hotelLocation["longitude"])
+        
+        var rawLat = hotelLocation["latitude"] as! Double
+        var rawLong = hotelLocation["longitude"] as! Double
+        
+        //println(rawLat)
+        //println(rawLong)
+        
+        var lat:CLLocationDegrees = rawLat
+        var long:CLLocationDegrees = rawLong
+        var latDelta:CLLocationDegrees = 0.01
+        var longDelta:CLLocationDegrees = 0.01
+        var span:MKCoordinateSpan = MKCoordinateSpanMake(latDelta, longDelta)
+        var location: CLLocationCoordinate2D = CLLocationCoordinate2DMake(lat, long)
+        var region:MKCoordinateRegion = MKCoordinateRegionMake(location, span)
+        
+        self.mapHotelMap.setRegion(region, animated: true)
+        
+        var annotation = MKPointAnnotation()
+        annotation.coordinate = location
+        annotation.title = hotelName
+        annotation.subtitle = csv
+        self.mapHotelMap.addAnnotation(annotation)
+        
+        
+        
+        }
+        
+        } else {
+        
+        /* No  hotel found */
+        var hotelName = "n/a"
+        dispatch_async(dispatch_get_main_queue(), {
+        self.lblHotelName.text = hotelName
+        })
+        
+        }
+        
+        }
+        
+        }
+        
+        })
+        
+        task.resume() */
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     /*
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // Get the new view controller using segue.destinationViewController.
+    // Pass the selected object to the new view controller.
     }
     */
-
+    
 }
