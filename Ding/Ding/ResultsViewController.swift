@@ -49,11 +49,11 @@ class ResultsViewController: UIViewController, MKMapViewDelegate {
             
             
             /* Name & Address */
-            hotelName = jsonSwifty["results"][0]["name"].stringValue
-            address1 = jsonSwifty["results"][0]["address"]["address1"].stringValue
-            city = jsonSwifty["results"][0]["address"]["city"].stringValue
-            state = jsonSwifty["results"][0]["address"]["state"].stringValue
-            zip = jsonSwifty["results"][0]["address"]["zip"].stringValue
+            hotelName = jsonSwifty["results"][0]["name"].string!
+            address1 = jsonSwifty["results"][0]["address"]["address1"].string!
+            city = jsonSwifty["results"][0]["address"]["city"].string!
+            state = jsonSwifty["results"][0]["address"]["state"].string!
+            zip = jsonSwifty["results"][0]["address"]["zip"].string!
             csv = city + ", " + state + "  " + zip
             
             
@@ -82,6 +82,37 @@ class ResultsViewController: UIViewController, MKMapViewDelegate {
                 }
                 
             })
+            
+            /* Location / Maps */
+            println(jsonSwifty["results"][0]["location"])
+            println(jsonSwifty["results"][0]["location"]["longitude"])
+            println(jsonSwifty["results"][0]["location"]["latitude"])
+            
+            var rawLat = jsonSwifty["results"][0]["location"]["latitude"].double
+            var rawLong = jsonSwifty["results"][0]["location"]["longitude"].double
+            
+            //println(rawLat)
+            //println(rawLong)
+            
+            var lat:CLLocationDegrees = rawLat!
+            var long:CLLocationDegrees = rawLong!
+            var latDelta:CLLocationDegrees = 0.01
+            var longDelta:CLLocationDegrees = 0.01
+            var span:MKCoordinateSpan = MKCoordinateSpanMake(latDelta, longDelta)
+            var location: CLLocationCoordinate2D = CLLocationCoordinate2DMake(lat, long)
+            var region:MKCoordinateRegion = MKCoordinateRegionMake(location, span)
+            
+            self.mapHotelMap.setRegion(region, animated: true)
+            
+            var annotation = MKPointAnnotation()
+            annotation.coordinate = location
+            annotation.title = hotelName
+            annotation.subtitle = csv
+            self.mapHotelMap.addAnnotation(annotation)
+            
+        } else {
+            
+            self.lblHotelName.text = "n/a"
             
         }
         
