@@ -42,9 +42,9 @@ class ResultsViewController: UIViewController, MKMapViewDelegate {
         let task = session.dataTaskWithURL(url!, completionHandler: { (data, response, error) -> Void in
             
             if (error != nil) {
-                println(error)
+                print(error)
             } else {
-                let jsonResult : AnyObject! = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as! NSDictionary
+                let jsonResult : AnyObject! = (try! NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers)) as! NSDictionary
                 
                 if jsonResult.count > 0 {
                   
@@ -77,8 +77,8 @@ class ResultsViewController: UIViewController, MKMapViewDelegate {
                         /* Photos */
                         if let photos = hotel["photos"] as? NSArray {
                             
-                            //println(photos)
-                            //println(photos[0])
+                            //print(photos)
+                            print(photos[0])
                             
                             var url = NSURL(string: photos[0] as! String)
                             var urlRequest = NSURLRequest(URL: url!)
@@ -87,11 +87,12 @@ class ResultsViewController: UIViewController, MKMapViewDelegate {
                                 
                                 if error != nil {
                                     
-                                    println(error)
+                                    print(error)
                                     
                                 } else {
                                     
-                                    var image = UIImage(data: data)
+
+                                    var image = UIImage(data: data!)
                                     self.imgHotelHeroPic.image = image
                                     
                                 }
