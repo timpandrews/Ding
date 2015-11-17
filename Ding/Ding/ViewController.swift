@@ -9,16 +9,34 @@
 import UIKit
 import CoreLocation
 
+
 class ViewController: UIViewController, CLLocationManagerDelegate {
+    
+    var myHotel = Hotel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        myHotel.name = "Test Hotel"
+        
         
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if (segue.identifier == "sequeToResults") {
+            var svc = segue.destinationViewController as! ResultsViewController;
+            
+            svc.toPass = myHotel
+            println("toPass")
+            println(svc.toPass)
+            println("toPass")
+            
+        }
     }
 
     

@@ -23,7 +23,8 @@ class ResultsViewController: UIViewController, MKMapViewDelegate, CLLocationMana
     var locationManger = CLLocationManager()
     var latString = ""
     var longString = ""
-
+    
+    var toPass:AnyObject!
     
     
     override func viewDidLoad() {
@@ -36,6 +37,10 @@ class ResultsViewController: UIViewController, MKMapViewDelegate, CLLocationMana
         var zip = ""
         var csv = ""
         
+        println(toPass)
+        println(toPass.name)
+        println(toPass.address)
+        
         /* Get Location */
         
         locationManger.delegate = self
@@ -45,8 +50,8 @@ class ResultsViewController: UIViewController, MKMapViewDelegate, CLLocationMana
         
         // Try getting location on initial ViewController and then use it here in ResultsViewController ????
         delay(0.4) {
-            println(self.latString)
-            println(self.longString)
+            //println(self.latString)
+            //println(self.longString)
 
         
             self.lblHotelName.text = ""
@@ -58,7 +63,7 @@ class ResultsViewController: UIViewController, MKMapViewDelegate, CLLocationMana
             /* URL for multi hotel query by long/lat */
             let url = NSURL(string: "https://api.staysmarter.com/v1/query?arrivalDate=1447525547&numNights=1&numAdults=2&radius=4.886431949732083&longitude=" + self.longString + "&latitude=" + self.latString + "&numRooms=1")
             
-            println(url)
+            //println(url)
             
             var request = NSURLRequest(URL: url!)
             var data = NSURLConnection.sendSynchronousRequest(request, returningResponse: nil, error: nil)
@@ -68,7 +73,7 @@ class ResultsViewController: UIViewController, MKMapViewDelegate, CLLocationMana
                 //println(jsonSwifty)
                 
                 //println(jsonSwifty["results"].count)
-                println(jsonSwifty["results"][1])  // Bug with hotel at [0]index for Apple Test Location
+                //println(jsonSwifty["results"][1])  // Bug with hotel at [0]index for Apple Test Location
                 //println(jsonSwifty["results"][1]["name"])
                 
                 
@@ -87,7 +92,7 @@ class ResultsViewController: UIViewController, MKMapViewDelegate, CLLocationMana
                 self.lblHotelCSV.text = csv
                 
                 /* Photo */
-                println(jsonSwifty["results"][1]["photos"][0])
+                //println(jsonSwifty["results"][1]["photos"][0])
                 
                 var url = NSURL(string: jsonSwifty["results"][1]["photos"][0].stringValue)
                 var urlRequest = NSURLRequest(URL: url!)

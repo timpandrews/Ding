@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C4501A021BA61EB6005156B4 /* imagePlaceholder2_225.png in Resources */ = {isa = PBXBuildFile; fileRef = C4501A011BA61EB6005156B4 /* imagePlaceholder2_225.png */; };
 		C4501A061BA63D16005156B4 /* AvailabilityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4501A051BA63D16005156B4 /* AvailabilityViewController.swift */; };
+		C470CEB61BB35FBF00DD3A74 /* classHotel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C470CEB51BB35FBF00DD3A74 /* classHotel.swift */; };
 		C4859B751BB0A1E600F0D247 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4859B741BB0A1E600F0D247 /* SwiftyJSON.swift */; };
 		C4859B771BB0AB0D00F0D247 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4859B761BB0AB0D00F0D247 /* CoreLocation.framework */; };
 		C49971731BA2CFFF00F3D916 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49971721BA2CFFF00F3D916 /* AppDelegate.swift */; };
@@ -41,6 +42,7 @@
 /* Begin PBXFileReference section */
 		C4501A011BA61EB6005156B4 /* imagePlaceholder2_225.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imagePlaceholder2_225.png; sourceTree = "<group>"; };
 		C4501A051BA63D16005156B4 /* AvailabilityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvailabilityViewController.swift; sourceTree = "<group>"; };
+		C470CEB51BB35FBF00DD3A74 /* classHotel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = classHotel.swift; path = ../classHotel.swift; sourceTree = "<group>"; };
 		C4859B741BB0A1E600F0D247 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		C4859B761BB0AB0D00F0D247 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		C499716D1BA2CFFF00F3D916 /* Ding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ding.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,6 +109,7 @@
 			children = (
 				C49971951BA2D10B00F3D916 /* images */,
 				C49971721BA2CFFF00F3D916 /* AppDelegate.swift */,
+				C470CEB51BB35FBF00DD3A74 /* classHotel.swift */,
 				C49971771BA2CFFF00F3D916 /* ViewController.swift */,
 				C49971791BA2CFFF00F3D916 /* Main.storyboard */,
 				C4501A051BA63D16005156B4 /* AvailabilityViewController.swift */,
@@ -204,6 +207,7 @@
 		C49971651BA2CFFF00F3D916 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = justTim;
 				TargetAttributes = {
@@ -270,6 +274,7 @@
 			files = (
 				C49971781BA2CFFF00F3D916 /* ViewController.swift in Sources */,
 				C49971731BA2CFFF00F3D916 /* AppDelegate.swift in Sources */,
+				C470CEB61BB35FBF00DD3A74 /* classHotel.swift in Sources */,
 				C49971761BA2CFFF00F3D916 /* Ding.xcdatamodeld in Sources */,
 				C4859B751BB0A1E600F0D247 /* SwiftyJSON.swift in Sources */,
 				C4501A061BA63D16005156B4 /* AvailabilityViewController.swift in Sources */,
